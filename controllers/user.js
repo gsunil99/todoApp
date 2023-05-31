@@ -13,7 +13,7 @@ export const login = async (req, res, next) => {
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      const error = new ErrorHandler('Invalid Email Id', 400);
+      const error = new ErrorHandler('Invalid Password', 400);
       return errorMiddleware(error, req, res, next);
     }
     sendCookie(user, res, `welcome!!!, ${user.name}`, 200);
