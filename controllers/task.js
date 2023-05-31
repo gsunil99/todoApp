@@ -1,6 +1,6 @@
 import Task from '../models/task.js';
 
-import ErrorHandler from '../middlewares/error.js';
+import { ErrorHandler } from '../middlewares/error.js';
 
 export const newTask = async (req, res, next) => {
   try {
@@ -31,7 +31,10 @@ export const getAllTasks = async (req, res, next) => {
 export const updateTask = async (req, res, next) => {
   try {
     const task = await Task.findById(req.params.id);
-    if (!task) return next(new ErrorHandler('Task not found', 404));
+    if (!task) {
+      const error = new ErrorHandler('Task not found', 404);
+      return errorMiddleware(error, req, res, next);
+    }
     task.isCompleted = !task.isCompleted;
     await task.save();
     return res.status(200).json({
@@ -45,7 +48,10 @@ export const updateTask = async (req, res, next) => {
 export const deleteTask = async (req, res, next) => {
   try {
     const task = await Task.findById(req.params.id);
-    if (!task) return next(new ErrorHandler('Task not found', 404));
+    if (!task) {
+      const error = new ErrorHandler('Task not found', 404);
+      return errorMiddleware(error, req, res, next);
+    }
     await task.deleteOne();
     return res.status(200).json({
       success: true,
