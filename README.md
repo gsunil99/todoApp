@@ -22,7 +22,7 @@ Before running the Todo App Backend API, ensure you have the following installed
 
 1.  Clone the repository to your local machine using the following command:
 
-`git clone https://github.com/gsunil99/todoApp.git` 
+`bash git clone https://github.com/gsunil99/todoApp.git` 
 
 2.  Navigate to the project directory:
 
