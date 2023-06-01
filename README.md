@@ -72,7 +72,7 @@ The API implements proper error handling and returns meaningful error responses.
 ## Folder Structure
 
 The folder structure of the Todo App Backend API is as follows:
-
+```bash
 todo-backend-api/
   ├── data/
   │   └── database.js
@@ -93,7 +93,7 @@ todo-backend-api/
   ├── package.json
   ├── server.js
   └── README.md
-
+ ```
 
 -   The `controllers/` directory contains the logic for handling API requests and responses.
 -   The `middleware/` directory contains custom middleware functions used in the API.
