@@ -73,9 +73,8 @@ The API implements proper error handling and returns meaningful error responses.
 
 The folder structure of the Todo App Backend API is as follows:
 
-arduinoCopy code
-
 `todo-backend-api/
+
   ├── data/
   │   └── database.js
   ├── controllers/
