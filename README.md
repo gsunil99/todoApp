@@ -22,21 +22,22 @@ Before running the Todo App Backend API, ensure you have the following installed
 
 1.  Clone the repository to your local machine using the following command:
 
-`bash git clone https://github.com/gsunil99/todoApp.git` 
+```bash git clone https://github.com/gsunil99/todoApp.git```
 
 2.  Navigate to the project directory:
 
-`cd todoApp` 
+```bash cd todoApp```
 
 3.  Install the project dependencies:
 
-`npm install` 
+```bash npm install```
 
 4.  Create a `config.env` file in the data folder of the project and configure the following environment variables:
-
-PORT=3000
+```bash
+PORT=8000
 MONGO_URL=your-mongodb-connection-string
 JWT_SECRET=your-jwt-secret-key
+```
 
 
 ## Usage
@@ -47,7 +48,7 @@ To start the Todo App Backend API, follow these steps:
 
 `npm start` 
 
-3.  The API will be running at `http://localhost:3000`.
+3.  The API will be running at `http://localhost:8000`.
 
 ## API Endpoints
 
